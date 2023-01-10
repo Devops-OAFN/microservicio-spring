@@ -23,8 +23,9 @@ steps:
   inputs:
     SonarCloud: 'TokenSonarCloud'
     organization: 'devops-oafn'
-    projectKey: 'oafn-microservicio-spring'
-    projectName: 'microservicio-spring'
+    scannerMode: 'Other'
+    #projectKey: 'oafn-microservicio-spring'
+    #projectName: 'microservicio-spring'
   displayName: Preparar analisis SonarCloud
 
 - task: Gradle@3
