@@ -23,6 +23,7 @@ steps:
   inputs:
     SonarCloud: 'TokenSonarCloud'
     organization: 'devops-oafn'
+    scannerMode: 'Other'
     projectKey: 'Devops-OAFN_microservicio-spring'
     projectName: 'microservicio-spring'
   displayName: Preparar analisis SonarCloud
