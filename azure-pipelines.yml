@@ -55,3 +55,26 @@ steps:
     codeCoverageTool: 'JaCoCo'
     summaryFileLocation: '$(Build.SourcesDirectory)/build/reports/jacoco/test/jacocoTestReport.xml'
 
+- task: Docker@2
+  inputs:
+    containerRegistry: 'DockerRegistry'
+    command: 'login'
+  displayName: Conexion a Docker
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'DockerRegistry'
+    repository: 'oscarfriasnunez/DevOps-OAFN'
+    command: 'build'
+    Dockerfile: '**/Dockerfile'
+    tags: 'latest'
+  displayName: Docker File
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'DockerRegistry'
+    repository: 'oscarfriasnunez/DevOps-OAFN'
+    command: 'push'
+    tags: 'latest'
+  displayName: Docker Push  
+
