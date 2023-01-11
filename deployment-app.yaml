@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ms-web-deployment
+  labels:
+    app: ms-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ms-web
+  template:
+    metadata:
+      labels:
+        app: ms-web
+    spec:
+      containers:
+      - name: ms-web
+        image: oscarfriasnunez/devops-oafn:latest
+        ports:
+        - containerPort: 8080
+        
