@@ -19,7 +19,4 @@ spec:
         image: oscarfriasnunez/devops-oafn:latest
         ports:
         - containerPort: 8080
-          forward:
-          - port: 8080
-            remoteport: 8088
         
