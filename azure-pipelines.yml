@@ -92,7 +92,7 @@ steps:
   inputs:
     connectionType: 'None'
     command: 'expose'
-    arguments: 'deployment testing-web-deployment --type=NodePort --name=testing-web-expose'
+    arguments: 'deployment ms-web-deployment --type=NodePort --name=ms-web-expose'
     secretType: 'dockerRegistry'
     containerRegistryType: 'Azure Container Registry'
   displayName: Exponer Kubernetes
